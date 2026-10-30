@@ -2,12 +2,82 @@ const $ = s => document.querySelector(s);
 const $$ = s => Array.from(document.querySelectorAll(s));
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const sections = [
-  {id:'education', title:'Education', entries:[]},
-  {id:'skills', title:'Technical Skills', entries:[]},
+  {id:'education', title:'Education', entries:[
+    {title:'National University of Singapore', date:'Aug 2024 – May 2028 (Expected)', subtitle:'Bachelor of Science (Hons) in Data Science and Analytics · Second Major in Economics', points:[
+      'Relevant coursework: Machine Learning, Cloud-based Data Science and Programming, Statistical Methods, Regression Analysis, Data Visualisation, Data Structures & Algorithms, Microeconomics, and Macroeconomics.'
+    ]},
+    {title:'Raffles Institution', date:'Feb 2022 – Dec 2023', subtitle:'Singapore-Cambridge GCE A-Levels', points:[
+      'H2 Mathematics, H2 Economics, H2 Biology, and H2 Chemistry.'
+    ]}
+  ]},
+  {id:'skills', title:'Technical Skills', entries:[
+    {title:'Programming Languages', subtitle:'Python · SQL · R · Java · HTML'},
+    {title:'Data Visualisation', subtitle:'Tableau · Power BI'},
+    {title:'Other Skills', subtitle:'Microsoft Office Suite · Video Editing'},
+    {title:'Languages', points:[
+      'English and Chinese: proficient in spoken and written communication.',
+      'Malay: elementary in spoken and written communication.'
+    ]}
+  ]},
   {id:'experience', title:'Work Experience', entries:[]},
-  {id:'projects', title:'Projects', entries:[]},
-  {id:'awards', title:'Awards & Certificates', entries:[]},
-  {id:'activities', title:'Co-Curricular Experience', entries:[]}
+  {id:'projects', title:'Projects', entries:[
+    {title:'Tencent Cloud Hackathon Healthcare Track', date:'Oct 2026', label:'Singapore · Participant', points:[
+      'Developed and deployed a bilingual web application in English and Chinese to support emotional reflection and appointment preparation for mothers experiencing postpartum depression.',
+      'Integrated context-aware AI follow-up questions with timestamped mood ratings, activity logs, and social context to help users articulate their emotional experiences between appointments.',
+      'Built interactive visualisations of emotion trends and PDF report generation to consolidate user-selected journal entries, recorded patterns, and consultation priorities into structured reports for discussion with healthcare providers.'
+    ]},
+    {title:'Tencent Cloud Hackathon Animation Track Global Finals', date:'Sept 2026', label:'Shenzhen · 3rd Place International Winner', points:[
+      'Developed an AI-driven interactive game using Miora for generative video synthesis and WorkBuddy for AI-assisted game development and integration. The team placed 3rd among 42 teams at the international finals, each a winner of its local qualifying competition.',
+      'Designed a multi-path narrative framework with conditional branching logic, decision-driven scene transitions, and dynamic storyline progression in response to player interactions.',
+      'Integrated AI-generated cinematic assets with interactive gameplay mechanics, enabling smooth navigation across divergent narrative pathways and cohesive visual storytelling.'
+    ]},
+    {title:'Tencent Cloud Hackathon Animation Track', date:'Jul 2026 – Aug 2026', label:'Singapore · 1st Place Winner', points:[
+      'Developed a multi-stage asset-generation pipeline in Miora to transform natural language descriptions into a cohesive animated video.',
+      'Created a standardised prompt engineering framework to control generation parameters, minimise variation caused by AI hallucinations, and maintain visual consistency across continuous 3D scenes.',
+      'Streamlined the creative workflow by modularising prompt structures for characters and environments, enabling rapid iteration and consistent visual outputs throughout the video’s runtime.'
+    ]},
+    {title:'Infineon Supply Chain Case Challenge', date:'Jun 2026 – Jul 2026', label:'Participant', points:[
+      'Proposed a graph-based framework using kNN and GraphSAGE to analyse semiconductor logistics and map dynamic supply-chain routes.',
+      'Implemented a modified Dijkstra’s algorithm to optimise routing, integrating a multilayer perceptron (MLP) for route pruning and efficiency forecasting.',
+      'Combined Monte Carlo simulations with XGBoost models to assess risk factors quantitatively and estimate probability distributions for potential disruptions in the logistics network.'
+    ]},
+    {title:'Urban Infrastructure Analysis', date:'Jan 2026 – Apr 2026', label:'DSA2101 Project · Python', points:[
+      'Processed 10,000+ U.S. intersection records from 1970–2023 in Python as part of a group project to investigate temporal adoption trends and policy factors influencing civil infrastructure design.',
+      'Conducted interactive spatial and time-series analysis using animated choropleth maps in Plotly across 13 four-year intervals to examine geographic distribution and state-level infrastructure buildout patterns.',
+      'Performed multivariate analysis of intersection geometry using cross-tabulation heat maps to assess correlations between approach complexity and multilane capacity configurations in relation to safety constraints.'
+    ]},
+    {title:'Heart Disease Statistical Analysis', date:'Jan 2025 – Apr 2025', label:'DSA1101 Project · R', points:[
+      'Prepared a 300-patient clinical dataset through data cleaning, mode imputation, and feature standardisation to evaluate cardiovascular risk factors.',
+      'Conducted exploratory data analysis using contingency tables, odds ratios, and distribution boxplots to identify significant predictor variables.',
+      'Trained and benchmarked k-nearest neighbours, decision tree, and logistic regression models using five-fold cross-validation to compare predictive performance.'
+    ]},
+    {title:'NUS Datathon', date:'Jan 2025 – Feb 2025', label:'Participant', points:[
+      'Developed and executed a machine-learning workflow for classification, applying data cleaning, missing-value imputation, winsorisation, and outlier management to improve data quality for modelling.',
+      'Benchmarked Random Forest and XGBoost classifiers using precision, recall, and F1-score to compare predictive performance and select the best-performing model for the classification task.'
+    ]}
+  ]},
+  {id:'awards', title:'Awards & Certificates', entries:[
+    {title:'3rd Place International Winner', date:'Sept 2026', label:'Award', subtitle:'Tencent Cloud Hackathon Animation Track Global Finals · Shenzhen', points:[
+      'Team placed 3rd among 42 teams at the international finals, each a winner of its local qualifying competition.'
+    ]},
+    {title:'1st Place Winner', date:'Jul 2026 – Aug 2026', label:'Award', subtitle:'Tencent Cloud Hackathon Animation Track · Singapore'},
+    {title:'AWS Academy Graduate – Cloud Architecting', label:'Certificate', subtitle:'Amazon Web Services (AWS)'},
+    {title:'AWS Academy Graduate – Cloud Foundations', label:'Certificate', subtitle:'Amazon Web Services (AWS)'},
+    {title:'Getting Up to Speed with Docker', label:'Certificate', subtitle:'Dell Technologies'},
+    {title:'Exploring Kubernetes', label:'Certificate', subtitle:'Dell Technologies'},
+    {title:'Certified SOLIDWORKS Electrical Associate (CSWA-E)', label:'Certificate', subtitle:'Dassault Systèmes'}
+  ]},
+  {id:'activities', title:'Co-Curricular Experience', entries:[
+    {title:'Ridge View Residential College Bouldering Interest Group', date:'Jan 2025 – Feb 2026', label:'Vice-Captain', points:[
+      'Planned and facilitated weekly bouldering sessions for approximately 30 members, coordinating logistical needs.',
+      'Managed the club’s annual work plan and operating budget of $300, optimising resource allocation for planned activities.',
+      'Led outreach and publicity initiatives that increased active club membership and climber retention.'
+    ]},
+    {title:'Raffles Institution', date:'Feb 2022 – Dec 2023', label:'Class Leader', points:[
+      'Coordinated class administration, logistics, and budget allocation for cohort events and student initiatives.',
+      'Served as the primary liaison between students and faculty to support student welfare.'
+    ]}
+  ]}
 ];
 gsap.registerPlugin(ScrollTrigger);
 const lenis = reduce ? null : new Lenis({duration:1.05,smoothWheel:true,anchors:true});
@@ -73,7 +143,50 @@ function showPanel(id){
   if(!s)return;
   $('#panel-title').textContent=s.title;
   $('#panel-number').textContent=`0${i+1} / 06`;
-  $('.panel-content').innerHTML='<div class="panel-empty"><span class="empty-mark" aria-hidden="true">—</span><div><h3>Coming soon.</h3><p>This space is ready for the next chapter.</p></div></div>';
+  const content=$('.panel-content');
+  content.replaceChildren();
+  if(s.entries.length){
+    s.entries.forEach((entry,index)=>{
+      const article=document.createElement('article');
+      article.className='resume-entry';
+      const meta=document.createElement('div');
+      meta.className='entry-meta';
+      const number=document.createElement('span');
+      number.className='entry-number';
+      number.textContent=String(index+1).padStart(2,'0');
+      meta.append(number);
+      for(const value of [entry.date,entry.label]){
+        if(!value)continue;
+        const detail=document.createElement('span');
+        detail.textContent=value;
+        meta.append(detail);
+      }
+      const body=document.createElement('div');
+      body.className='entry-body';
+      const title=document.createElement('h3');
+      title.textContent=entry.title;
+      body.append(title);
+      if(entry.subtitle){
+        const subtitle=document.createElement('p');
+        subtitle.className='entry-subtitle';
+        subtitle.textContent=entry.subtitle;
+        body.append(subtitle);
+      }
+      if(entry.points?.length){
+        const list=document.createElement('ul');
+        for(const point of entry.points){
+          const item=document.createElement('li');
+          item.textContent=point;
+          list.append(item);
+        }
+        body.append(list);
+      }
+      article.append(meta,body);
+      content.append(article);
+    });
+  }else{
+    content.innerHTML='<div class="panel-empty"><span class="empty-mark" aria-hidden="true">—</span><div><h3>Coming soon.</h3><p>This space is ready for the next chapter.</p></div></div>';
+  }
   showDialog($('#information'),!!currentDialog);
   $('.panel-scroll').scrollTop=0;
 }
