@@ -15,6 +15,9 @@
 footer{background:#fbeef2;color:var(--rose-dark)}
 .contact-links,.overlay-top,.overlay-nav button,.overlay-bottom,#contact .section-line,#contact .footer-bottom{border-color:var(--rose-line)}
 .contact-links a:hover{color:#9b4667}
+.contact-links a{display:inline-flex;align-items:center;gap:7px}
+.contact-links a>span{display:inline-block;transform-origin:center;transition:transform .4s}
+.contact-links a:hover>span,.contact-links a:focus-visible>span{transform:rotate(45deg)}
 #contact .post{border-color:var(--rose-line)}
 .overlay{background:#f3d2de;color:var(--rose-dark)}
 .overlay::backdrop{background:rgba(83,40,57,.22)}
