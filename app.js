@@ -20,14 +20,15 @@ const sections = [
     ]}
   ]},
   {id:'experience', title:'Work Experience', entries:[]},
-  {id:'projects', title:'Projects', entries:[
+  {id:'projects', title:'Competitions & Projects', entries:[
     {title:'Tencent Cloud Hackathon Healthcare Track', date:'Oct 2026', label:'Singapore · Participant', points:[
       'Developed and deployed a bilingual web application in English and Chinese to support emotional reflection and appointment preparation for mothers experiencing postpartum depression.',
       'Integrated context-aware AI follow-up questions with timestamped mood ratings, activity logs, and social context to help users articulate their emotional experiences between appointments.',
       'Built interactive visualisations of emotion trends and PDF report generation to consolidate user-selected journal entries, recorded patterns, and consultation priorities into structured reports for discussion with healthcare providers.'
     ]},
     {title:'Tencent Cloud Hackathon Animation Track Global Finals', date:'Sept 2026', label:'Shenzhen · 3rd Place International Winner', points:[
-      'Developed an AI-driven interactive game using Miora for generative video synthesis and WorkBuddy for AI-assisted game development and integration. The team placed 3rd among 42 teams at the international finals, each a winner of its local qualifying competition.',
+      'Placed 3rd among 42 teams at the international finals, with every team having won a local qualifying competition.',
+      'Developed an AI-driven interactive game using Miora for generative video synthesis and WorkBuddy for AI-assisted game development and integration.',
       'Designed a multi-path narrative framework with conditional branching logic, decision-driven scene transitions, and dynamic storyline progression in response to player interactions.',
       'Integrated AI-generated cinematic assets with interactive gameplay mechanics, enabling smooth navigation across divergent narrative pathways and cohesive visual storytelling.'
     ]},
@@ -58,7 +59,7 @@ const sections = [
   ]},
   {id:'awards', title:'Awards & Certificates', entries:[
     {title:'3rd Place International Winner', date:'Sept 2026', label:'Award', subtitle:'Tencent Cloud Hackathon Animation Track Global Finals · Shenzhen', points:[
-      'Team placed 3rd among 42 teams at the international finals, each a winner of its local qualifying competition.'
+      'Placed 3rd among 42 teams at the international finals, with every team having won a local qualifying competition.'
     ]},
     {title:'1st Place Winner', date:'Jul 2026 – Aug 2026', label:'Award', subtitle:'Tencent Cloud Hackathon Animation Track · Singapore'},
     {title:'AWS Academy Graduate – Cloud Architecting', label:'Certificate', subtitle:'Amazon Web Services (AWS)'},

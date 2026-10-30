@@ -33,7 +33,7 @@ footer{background:#fbeef2;color:var(--rose-dark)}
 .panel-empty h3{font:700 clamp(26px,3vw,42px)/1.2 var(--serif);letter-spacing:-.035em;margin:0 0 12px}
 .panel-empty p{margin:0;font-size:14px;line-height:1.7;color:#8c5368}
 .resume-entry{border-color:var(--rose-line)}
-.entry-meta{color:#8c5368}
+.entry-meta{color:#8c5368;font-size:14px;line-height:1.7}
 .entry-number{font-size:11px;letter-spacing:.14em}
 .entry-body{min-width:0}
 .entry-body h3{text-wrap:balance}
@@ -50,7 +50,7 @@ footer{background:#fbeef2;color:var(--rose-dark)}
  .panel-empty{gap:20px;align-items:flex-start}
  .panel-empty .empty-mark{font-size:48px}
  .panel-empty p{max-width:24ch}
- .entry-meta{flex-wrap:wrap;column-gap:18px;row-gap:6px}
+ .entry-meta{font-size:13px;flex-wrap:wrap;column-gap:18px;row-gap:6px}
  .entry-meta>span:last-child:not(:first-child){flex-basis:100%}
  .overlay-bottom>span:last-child{max-width:110px;text-align:right;line-height:1.6}
  .footer-bottom{align-items:flex-start}
