@@ -68,7 +68,7 @@ const sections = [
     {title:'Exploring Kubernetes', label:'Certificate', subtitle:'Dell Technologies'},
     {title:'Certified SOLIDWORKS Electrical Associate (CSWA-E)', label:'Certificate', subtitle:'Dassault Systèmes'}
   ]},
-  {id:'activities', title:'Co-Curricular Experience', entries:[
+  {id:'activities', title:'Leadership Experience', entries:[
     {title:'Ridge View Residential College Bouldering Interest Group', date:'Jan 2025 – Feb 2026', label:'Vice-Captain', points:[
       'Planned and facilitated weekly bouldering sessions for approximately 30 members, coordinating logistical needs.',
       'Managed the club’s annual work plan and operating budget of $300, optimising resource allocation for planned activities.',

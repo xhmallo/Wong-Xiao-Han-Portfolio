@@ -6,7 +6,7 @@ Personal portfolio for Wong Xiao Han, studying Data Science and Analytics with a
 
 ## Website
 
-A responsive pastel pink portfolio with scroll-driven name transitions, animated section navigation, and space for education, technical skills, work experience, projects, awards and certificates, and co-curricular experience.
+A responsive pastel pink portfolio with scroll-driven name transitions, animated section navigation, and space for education, technical skills, work experience, projects, awards and certificates, and leadership experience.
 
 The site uses HTML, CSS, JavaScript, GSAP, ScrollTrigger, and Lenis. Fonts and animation libraries are bundled locally.
 
