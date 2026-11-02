@@ -1,0 +1,70 @@
+.xh-chat{--chat-ink:#653348;--chat-muted:#8c5368;--chat-line:#d8b2c0;--chat-paper:#fff7f9;position:fixed;right:28px;bottom:24px;z-index:70;color:var(--chat-ink);font:400 14px/1.5 var(--sans,Arial,sans-serif)}
+.xh-chat *{box-sizing:border-box}
+.xh-chat button,.xh-chat textarea{font-family:inherit}
+.xh-chat button{color:inherit;touch-action:manipulation}
+.xh-chat button:focus-visible,.xh-chat textarea:focus-visible{outline:2px solid #9b4667;outline-offset:4px}
+.xh-chat [hidden]{display:none!important}
+.xh-chat svg{width:22px;height:22px;flex:none}
+.xh-chat-launcher{display:flex;align-items:center;gap:12px;min-height:52px;padding:13px 21px;border:1px solid #b77f94;border-radius:999px;background:#f3d2de;box-shadow:0 5px 22px #753c5014;transition:background .25s,box-shadow .25s,transform .25s;font-size:13px;letter-spacing:.02em}
+.xh-chat-launcher:hover{background:#eec4d4;box-shadow:0 8px 28px #753c5022;transform:translateY(-2px)}
+.xh-chat.is-open .xh-chat-launcher{background:#653348;color:#fff7f9;border-color:#653348}
+.xh-chat-panel{position:absolute;right:0;bottom:66px;width:382px;height:440px;max-width:calc(100vw - 40px);max-height:calc(100dvh - 120px);display:flex;flex-direction:column;border:1px solid var(--chat-line);border-radius:20px;overflow:hidden;background:var(--chat-paper);box-shadow:0 18px 65px #65334824;animation:xh-chat-in .23s ease-out}
+.xh-chat-header{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;flex:none;padding:24px 20px 20px;background:#f7e1e9;border-bottom:1px solid var(--chat-line)}
+.xh-chat-heading-group{min-width:0}
+.xh-chat-title{font:700 26px/1.18 var(--serif,Georgia,serif);letter-spacing:-.035em;margin:0 0 8px}
+.xh-chat-subtitle{font-size:11px;color:var(--chat-muted);margin:0}
+.xh-chat-header-actions{display:flex;align-items:center;gap:1px;flex:none;margin:-3px -8px 0 0}
+.xh-chat-close,.xh-chat-header-action{display:grid;place-items:center;flex:none;width:30px;height:30px;border-radius:50%;padding:0;transition:background .25s;font-size:21px}
+.xh-chat-close:hover,.xh-chat-header-action:hover:not(:disabled){background:#edc6d5}
+.xh-chat-header-action:disabled{opacity:.4;cursor:default}
+.xh-chat-close svg{width:19px;height:19px}
+.xh-chat-scroll{min-height:0;flex:1;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#d8b2c0 transparent;padding:21px 20px 16px}
+.xh-chat-intro{font-size:13px;line-height:1.7;margin:0 0 17px;max-width:32ch}
+.xh-chat-suggestions{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 8px}
+.xh-chat-suggestion{padding:7px 11px;border:1px solid var(--chat-line);border-radius:999px;font-size:11px;text-align:left;background:#fffafb;transition:background .2s,border-color .2s}
+.xh-chat-suggestion:hover{background:#f7e1e9;border-color:#b77f94}
+.xh-chat-messages{display:flex;flex-direction:column;gap:15px}
+.xh-chat-message{max-width:93%;border-radius:12px;padding:12px 14px;overflow-wrap:anywhere}
+.xh-chat-message-user{align-self:flex-end;background:#f1d2df;border-bottom-right-radius:3px}
+.xh-chat-message-assistant{align-self:flex-start;background:#f8eaf0;border-bottom-left-radius:3px}
+.xh-chat-speaker{display:block;font-size:8px;letter-spacing:1.15px;color:var(--chat-muted);margin-bottom:6px}
+.xh-chat-message p{font-size:13px;line-height:1.7;white-space:pre-wrap;margin:0}
+.xh-chat-status:empty{display:none}
+.xh-chat-status{font-size:12px;line-height:1.65;margin-top:15px;color:var(--chat-muted)}
+.xh-chat-thinking{display:inline-flex;align-items:center;gap:8px}
+.xh-chat-thinking::before{content:'';width:5px;height:5px;flex:none;border-radius:50%;background:#ad6e86;animation:xh-chat-pulse 1.2s ease-in-out infinite}
+.xh-chat-error{margin:0 0 6px}
+.xh-chat-retry{font-size:12px;padding:3px 0;border-bottom:1px solid #b77f94}
+.xh-chat-footer{padding:14px 20px 16px;flex:none;border-top:1px solid var(--chat-line);background:var(--chat-paper)}
+.xh-chat-form{display:flex;align-items:flex-end;gap:6px;padding:5px 5px 5px 12px;border:1px solid #c697a9;border-radius:11px;background:#fffafb}
+.xh-chat-form:focus-within{border-color:#9b4667;box-shadow:0 0 0 1px #9b4667}
+.xh-chat-input{display:block;resize:none;min-width:0;width:100%;height:34px;min-height:34px;max-height:100px;padding:7px 0 5px;line-height:22px;font-size:14px;border:0;background:transparent;color:var(--chat-ink);overflow-y:auto;scrollbar-width:thin}
+.xh-chat-input::placeholder{color:#9d7082;opacity:1}
+.xh-chat .xh-chat-input:focus-visible{outline:0}
+.xh-chat-send{display:grid;place-items:center;width:34px;height:34px;flex:none;padding:0;border-radius:8px;background:#753c50;color:#fff7f9!important;transition:background .2s,opacity .2s}
+.xh-chat-send:hover:not(:disabled){background:#9b4667}
+.xh-chat-send:disabled{opacity:.35;cursor:default}
+.xh-chat-send svg{width:19px;height:19px}
+.xh-chat-privacy{margin:9px 0 0;font-size:9px;line-height:1.5;color:var(--chat-muted)}
+@keyframes xh-chat-in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes xh-chat-pulse{0%,100%{opacity:.35}50%{opacity:1}}
+@media(max-width:700px){
+ .xh-chat{right:16px;bottom:max(16px,env(safe-area-inset-bottom))}
+ .xh-chat-launcher{min-height:48px;padding:11px 16px;font-size:12px;gap:9px}
+ .xh-chat-launcher svg{width:20px;height:20px}
+ .xh-chat-panel{width:365px;max-width:calc(100vw - 32px);height:465px;bottom:61px;max-height:calc(100dvh - 95px - env(safe-area-inset-bottom));border-radius:18px}
+ .xh-chat-header{padding:20px 18px 16px}
+ .xh-chat-title{font-size:26px}
+ .xh-chat-scroll{padding:18px}
+ .xh-chat-footer{padding:12px 16px 14px}
+ .xh-chat-input{font-size:16px}
+}
+@media(max-height:560px){
+ .xh-chat-panel{height:calc(100dvh - 36px);max-height:calc(100dvh - 36px);bottom:0;right:0}
+ .xh-chat.is-open .xh-chat-launcher{visibility:hidden}
+ .xh-chat-header{padding-top:16px;padding-bottom:12px}
+ .xh-chat-subtitle{display:none}
+ .xh-chat-title{margin-bottom:0;font-size:24px}
+ .xh-chat-privacy{margin-top:5px}
+}
+@media(prefers-reduced-motion:reduce){.xh-chat-panel,.xh-chat-thinking::before{animation:none}.xh-chat *{transition:none!important}}
