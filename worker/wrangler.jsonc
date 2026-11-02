@@ -1,0 +1,15 @@
+{
+  "name": "wong-xiao-han-assistant",
+  "main": "worker.js",
+  "compatibility_date": "2026-11-02",
+  "workers_dev": true,
+  "ai": { "binding": "AI" },
+  "ratelimits": [
+    {
+      "name": "CHAT_RATE_LIMITER",
+      "namespace_id": "2601102",
+      "simple": { "limit": 8, "period": 60 }
+    }
+  ],
+  "observability": { "enabled": false }
+}
